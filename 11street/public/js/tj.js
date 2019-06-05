@@ -52,6 +52,26 @@
                         `
                     }
                 this.thCont.innerHTML=str
+                this.changeBorder()
+        }
+        changeBorder(){
+            console.log(1)
+            var that=this
+            this.thCont.onmouseover=function(eve){
+                var e=eve||window.event
+                var target=e.target || e.srcElement
+                if(target.nodeName=="DIV"){
+                    target.style.border=".5px solid red"
+                }
+                
+            }
+            this.thCont.onmouseout=function(eve){
+                var e=eve||window.event
+                var target=e.target || e.srcElement
+                if(target.nodeName=="DIV"){
+                    target.style.border=""
+                }
+            }
         }
     }
     new Tjcx()

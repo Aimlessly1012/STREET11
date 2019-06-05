@@ -14,9 +14,9 @@
     <div id="headerNav">
         <div class="layout">
             <div>
-                <a href="Sign in.html"><em>登录</em></a>
+                <a href="../Sign in/Sign in.html"><em>登录</em></a>
                 <span></span>
-                <a href="../register/register.html"><em>注册会员</em></a>
+                <a href="register.html"><em>注册会员</em></a>
                 <span></span>
                 <a><em>我的11STREET</em></a>
                 <span></span>
@@ -121,32 +121,27 @@
 
         </div>
     </nav>
-    <main class="layout">
-        <h3>欢迎访问 STREET</h3>
-        <div class="main-a">
-            <div class="main-l">
-                <p>ID/密码登录</p>
-                <ul>
-                    <li><span>用户ID</span>
-                        <input type="text" placeholder="11street ID" id="txt1">
-                        <input type="checkbox" id="ck">
-                        <b>保存我的ID</b>
-                    </li>
-                    <li><span>密码</span>
-                        <input type="password" id="PW">
-                        <input type="button" value="登录" id="btn0">
-                    </li>
-                </ul>
-                <i></i>
-
-            </div>
-            <div class="main-r">
-                <h4>立即注册</h4>
-                <h5>您还未创建 11STREET帐户？</h5>
-                <p>在 11STREET网站上可免费创建帐户。<br/>创建账户后，您可以享受各种各样的客户福利，包括折扣和奖励。</p>
-                <a href="../register/register.html">创建账户</a>
-            </div>
-        </div>
+    <main>
+        <h3>11STREET 热销尖货</h3>
+            <ul class="nr">
+                <!-- <li>
+                    <div class="cont-1">
+                        <img data-src="http://i.11street.com/ex_t/R/212x212/1/85/1/src/pd/19/9/2/7/4/4/1/uBYcu/1435927441_L300.jpg" alt="">
+                        <p>[金在奂] MIN:D 粉丝见面会官方周边</p>
+                        <div>
+                            <span>￥61.26~</span>
+                            <i>1</i>
+                        </div>
+                    </div>
+                </li> -->
+            </ul>
+            <div class="pagWarp" id="pageWarp">
+                    <span id="btnL">上一页</span>
+                    <ul id="pageCont">
+                    </ul>
+                    <span id="btnR">下一页</span>
+                </div>
+            </body>
     </main>
         
     <footer>
@@ -191,30 +186,28 @@
     </footer>
 </body>
 <script src="../public/js/ajax.2.0.js"></script>
-<script src="../public/js/menu.js"></script>
-<script src="js/signin.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/getlist.js"></script>
 
 <script>
-        (function(){
-            class Menu{
-                constructor(){
-                    this.btn=document.querySelector("nav #btn2")
-                    this.list=document.querySelector("nav .yiji")
-                    this.init()
-                };
-                init(){
-                    var that=this
-                    this.btn.onmouseover=function(){
-                        that.list.style.display="block"
-                    }
-                    this.btn.onmouseout=function(){
-                        that.list.style.display="none"
-                    }
-
-                }
+    class Menu{
+        constructor(){
+            this.btn=document.querySelector("nav #btn2")
+            this.list=document.querySelector("nav .yiji")
+            this.init()
+        };
+        init(){
+            var that=this
+            this.btn.onmouseover=function(){
+                that.list.style.display="block"
+            }
+            this.btn.onmouseout=function(){
+                that.list.style.display="none"
             }
 
-            new Menu
-        })()
+        }
+    }
+    new Menu()
+    
     </script>
 </html>

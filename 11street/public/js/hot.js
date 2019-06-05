@@ -49,8 +49,29 @@
                     </li>
                     `
             }
+
             this.ulB.innerHTML=str
+            this.changeBorder()
         }
+        changeBorder(){
+            var that=this
+            this.ulB.onmouseover=function(eve){
+                var e=eve||window.event
+                var target=e.target || e.srcElement
+                if(target.nodeName=="DIV"){
+                    target.style.border=".5px solid red"
+                }
+                
+            }
+            this.ulB.onmouseout=function(eve){
+                var e=eve||window.event
+                var target=e.target || e.srcElement
+                if(target.nodeName=="DIV"){
+                    target.style.border=""
+                }
+            }
+        }
+
         addEvent(){
             var that=this
             this.liT[0].firstElementChild.style.backgroundColor="#f43142";

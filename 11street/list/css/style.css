@@ -20,7 +20,7 @@ nav #btn2{height:52px;width:175px;;cursor: default;font:14px/37px "";border:2px 
 nav #btn2 .xlg{width:16px;height:13px;background:url(../../public/images/icon.png) no-repeat;background-position: -109px -8px;float: left;margin:15px 0 0 13px;}
 nav #btn2 em{float: left;margin-left:8px}
 nav>.layout>a{width:100px;display: block;float: left;font: 14px/51px "";margin-left:15px}
-nav .yiji{width:175px;height:465px;background:#161223;position:absolute;top:53px;z-index: 20;display: none}
+nav .yiji{width:175px;height:465px;background:#161223;position:absolute;top:53px;z-index: 20;display:none}
 nav .yiji li{padding-left:10px;height:41px;border-bottom:1px solid #4e4c53;font: 15px/41px "";color: #fff;}
 nav .yiji>li:nth-child(11){border:none}
 nav .yiji>li .erji{height:465px;width:400px;background:#fff;position:absolute;top:0;left:175px;display:none}
@@ -29,29 +29,23 @@ nav .yiji>li .erji i{position:absolute;height:2px;left:10px;right:10px;backgroun
 nav .yiji>li .erji .erjic{margin-top:10px;}
 nav .yiji>li .erji .erjic a{font:13px/22px "";height:22px;display:block;margin-left:10px}
 
-main{padding:75px 0}
-main h3{margin:0 auto; text-align: center;font: 44px/44px "";color: #333;text-align: center;font-weight: normal;}
-main .main-a{display:flex;justify-content:center;margin-top:30px}
-main .main-a .main-l,.main-r{margin-left:10px;padding: 20px;height: 332px;width:360px;border: 1px solid #b9b9b9;}
-main .main-a .main-l{background: #e9f2f9;}
-main .main-a .main-r{background: #fafafa;}
-main .main-a .main-l p{font: 18px/18px "";color: #333;}
-main .main-a .main-l ul{margin-top:100px;padding: 0 20px;}
-main .main-a .main-l ul li{height:20px;font-size: 12px/14px "";margin-top:30px}
-main .main-a .main-l ul li span{float: left;}
-main .main-a .main-l #ck{float: right;}
-main .main-a .main-l ul li b{float: right;margin-right:10px}
-main .main-a .main-l #txt1{float: left;margin-left:10px}
-main .main-a .main-l #PW{float: left;margin-left:22px}
-main .main-a .main-l #btn0{float: right;width:60px;height:20px;background:rgb(248, 96, 76);border: 0;color:#fff}
-main .main-a .main-r h4{font: 18px/18px "";color: #333;padding-bottom: 16px;}
-main .main-a .main-r h5{padding: 4px 0 7px 0;font: 15px/15px "";color: #333;font-weight: normal;}
-main .main-a .main-r p{height: 230px;border-bottom: 1px solid #b9b9b9;font: 13px/15px "";}
-main .main-a .main-r a{text-align: center;display:block;width: 143px;border-top: 1px solid #fff;font:11px/20px "";color: #fff;background: #666;margin:20px 0 0 100px;height:20px}
+main{padding:75px 200px;width:1200px;margin:0 auto;position: relative}
+main h3{font-weight: normal;font: 22px/22px "";color: #111;border-bottom:2px solid silver;padding:10px}
+main .nr{display:flex;flex-wrap:wrap;justify-content: space-around}
+main .nr li{padding:10px 5px 0 0;width:220px;height: 360px;position: relative;margin-top:50px;box-sizing: border-box}
+main .nr li .cont-1{padding-bottom:20;height: 350px;border: 1px solid #f4f6f8;border-bottom: 1px solid #d0d1d3;background:#fff}
+main .nr li .cont-1 img{width:212px;height: 212px;background:rgb(99, 210, 214)}
+main .nr li p{overflow: hidden;display: block;height: 37px;margin-right: -1px;padding-right: 1px;font-size: 14px;line-height: 18px;color: #333;word-break: keep-all;margin:15px;}
+main li span{font: bold 22px/22px '';color: #333;margin:15px}
+main li .cont-1 i{display:block;width:40px;height:40px;background:rgba(0,0,0,.4);position: absolute;border-radius:50%;text-align:center;font:16px/40px "";color:#fff;top:20px}
 
-
-
-
+main .pagWarp{height: 40px;box-shadow: 0 2px 5px #b6b6b6;position: absolute;border-radius: 2px;right: 42%;bottom: 20px;}
+main #btnL,#btnR{line-height: 40px;cursor: pointer;}
+main #btnL{float: left;}
+main #btnR{float: right;}
+.pagWarp ul{height: 40px;margin: 0 auto;float: left;text-align: center;padding-left: 40px;padding-right: 40px;}
+.pagWarp ul li{float: left;text-align: center;line-height: 40px;padding: 0 4px;}
+.active{color: blue;font: 24px/24px "";}
 
 footer{height:300px;background-color:#fafafa;}
 footer .aboutUs{height:40px;background-color:#f2f2f2;border-bottom:2px solid #dadada}

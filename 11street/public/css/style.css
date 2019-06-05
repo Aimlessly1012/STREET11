@@ -32,12 +32,13 @@ nav .yiji>li .erji .erjic a{font:13px/22px "";height:22px;display:block;margin-l
 
 #banner{height:465px;background-color:#e37fb1;}
 #banner .banner{position: relative;left:175px;width:1025px;height:465px;}
-#banner .banner img{position: absolute;}
-#banner .banner img:nth-child(1){z-index:10}
-#banner .banner img:nth-child(2){z-index:9}
-#banner .banner img:nth-child(3){z-index:8}
-#banner .banner img:nth-child(4){z-index:7}
-#banner .banner img:nth-child(5){z-index:6}
+#banner .banner .banner1{position: absolute;}
+#banner .banner .img{position: absolute;}
+#banner .banner .img:nth-child(1){z-index:10}
+#banner .banner .img:nth-child(2){z-index:9}
+#banner .banner .img:nth-child(3){z-index:8}
+#banner .banner .img:nth-child(4){z-index:7}
+#banner .banner .img:nth-child(5){z-index:6}
 #banner .banner ul{position: absolute;top:429px;height:37px;width:983px;display: flex}
 #banner .banner ul li{width:197px;height:35px;border-bottom:1px solid #c0c3c8;border-right:1px solid #c0c3c8;background:#f9f8fb;font: 14px/35px "";text-align: center;z-index: 19;}
 #banner .banner button{width:42px;height:37px;background:#f9f8fb url(../images/icon.png) no-repeat center;display: block;position: absolute;;left:983px;top:429px;z-index: 19;border:none;background-position:-60px 0}
@@ -45,7 +46,7 @@ nav .yiji>li .erji .erjic a{font:13px/22px "";height:22px;display:block;margin-l
 #banner .banner .left,.right{width:60px;height:60px;position: absolute;z-index: 12;opacity: 0.7;}
 #banner .banner .left{left:0;top:200px;background:url(../images/icon.png) no-repeat center;background-position: 0 -180px;}
 #banner .banner .right{right:241px;top:200px;background:url(../images/icon.png) no-repeat center;background-position: 0 -60px;}
-#banner .banner .zb img{width:242px;height:380px;position: absolute;z-index: 12;right:0;top:40px}
+#banner .banner .zb img{width:242px;height:380px;position: absolute;z-index: 12;right:0;top:40px;background-color: rgb(255, 111, 111,0);}
 
 
 main{border-bottom:2px solid #dadada;padding-bottom: 35px;background:#e9edf0}
@@ -68,16 +69,13 @@ main .main-best .tjzq span{width: 5px;height: 5px;background: #666;display: inli
 main .main-best ul {width: auto;top:50px;display:flex;flex-wrap:wrap;position: absolute;}
 main .main-best ul li{padding:10px 5px 0 0;width:285px;height: 427px;}
 main .main-best ul li .cont-1{padding-bottom:20;height: 427px;border: 1px solid #f4f6f8;border-bottom: 1px solid #d0d1d3;background:#fff}
+main .main-best ul li .cont-1 img{width:280px;height:280px;margin-left:2px;}
 main .main-best ul li p{overflow: hidden;display: block;height: 37px;margin-right: -1px;padding-right: 1px;font-size: 14px;line-height: 18px;color: #333;word-break: keep-all;margin:15px}
 main .main-best ul li span{font: bold 22px/22px '';color: #333;margin:15px}
 
-
-
-
-
 main .main-hot{padding-top:45px;height:495px;position: relative;}
-main .main-hot .main-hot-t{display:flex;justify-content: space-around;height:112px;background:#fff;border-bottom:1px solid #aaa;box-sizing: border-box;}
-
+main .main-hot .main-hot-t{display:flex;justify-content: space-around;height:112px;background:#fff;border-bottom:1px solid #aaa;box-sizing: border-box;margin-top:30px}
+main .main-hot .gd{float: right}
 main .main-hot .main-hot-t li{margin-top:25px;width:100px;}
 main .main-hot .main-hot-t div{width:40px;height:40px;background:#f4f6f8 url(../images/icon.png) no-repeat;border-radius:50px;margin-left:20px}
 main .main-hot .main-hot-t li:nth-child(1) div{background-position:-138px 0}
@@ -86,9 +84,10 @@ main .main-hot .main-hot-t li:nth-child(3) div{background-position:-138px -80px}
 main .main-hot .main-hot-t li:nth-child(4) div{background-position:-138px -120px}
 main .main-hot .main-hot-t li p{line-height: 16px;letter-spacing: 0.5px;font-weight: normal;padding-top:15px;font: 12px "";margin-left:20px}
 main .main-hot .main-hot-b{padding: 20px;background: #fff;height:340px}
-main .main-hot .main-hot-b li{float: left;padding: 0 4px}
+main .main-hot .main-hot-b li{float: left;padding: 0 4px;box-sizing: border-box}
 
-main .main-hot .main-hot-b li .cont-1{width:224px;height:340px;background: #fff;position: relative;}
+main .main-hot .main-hot-b li .cont-1{width:223px;height:340px;background: #fff;position: relative;}
+main .main-hot .main-hot-b li .cont-1 img{width:222px;margin-left:1px;}
 main .main-hot .main-hot-b li .cont-1 p{overflow: hidden;display: block;height: 37px;margin-right: -1px;padding-right: 1px;font: 14px/18px "";color: #333;word-break: keep-all;margin:15px}
 main .main-hot .main-hot-b li .cont-1 span{font: bold 22px/22px '';color: #333;margin:15px}
 main .main-hot .main-hot-b li .cont-1 i{display:block;width:40px;height:40px;background:rgba(0,0,0,.4);position: absolute;border-radius:50%;text-align:center;font:16px/40px "";color:#fff;top:0}
@@ -99,14 +98,7 @@ main .main-hot .right1{right:0;top:300px;background:rgba(0,0,0,.4) url(../images
 
 
 
-
-
-
-
-
-
-
-main .main-rec{padding-top:45px;height:326px;}
+main .main-rec{padding-top:45px;height:326px;margin-top:30px}
 main .main-rec>div{height:40px}
 main .main-rec h3{font:28px/36px "";font-weight: bold;color: #2d323b;padding-bottom:15px;float: left;}
 main .main-rec .tjzq{float:right;}
@@ -126,7 +118,7 @@ main .main-rec ul li:last-child img{width:240;height:243px;}
 
 
 
-main .main-11s{margin-top:70px;overflow: hidden;}
+main .main-11s{margin-top:70px;overflow: hidden;background:#fff;}
 main .main-11s .logo3{float: left;}
 main .main-11s .a11s-r{float: left;padding:10px 20px 0 20px;height:315px;background:#fff;}
 main .main-11s .a11s-r .a11s-r-l{float: left}
@@ -158,3 +150,7 @@ footer .footer-t-c,.footer-t-r{float: left;margin:40px 0 0 55px;font-size: 12px;
 footer .footer-t h3{margin-bottom: 3px;font-size: 13px;line-height: 19px;font-weight: bold;color: #333;}
 footer .footer-b{padding-top:20px;font-size: 12px;line-height: 18px;color: #999;}
 
+figure{position: fixed;top:42%;right:30px}
+figure ul{width:70px;height:240px;background:rgba(84, 161, 233, 0.7);border-radius:10px;display:flex;flex-wrap: wrap;padding: 0 5px}
+figure ul li{width:70px;height:40px;text-align: center;font: 12px/40px "";border-bottom: 1px solid rgba(84, 161, 233);color:#fff}
+figure ul li:nth-child(6){border:0}
