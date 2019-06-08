@@ -47,6 +47,7 @@
             this.ul.innerHTML=str
             this.changeBorder()
             new Lazy()
+            this.getlocal()
         };
 
         changeBorder(){
@@ -115,6 +116,24 @@
                 this.pageCont.children[i].className="";
             }
             this.pageCont.children[this.index].className="active";
+
+        }
+        getlocal(){
+            var that=this
+            this.ali=document.querySelectorAll(".goods-cont");
+            console.log(this.ali)
+            for(var i=0;i<this.ali.length;i++){
+                this.ali[i].onclick=function(){
+                    this.src = this.children[0].children[0].src
+                    this.cont = this.children[0].children[1].innerHTML
+                    this.price = this.children[0].children[2].children[0].innerHTML
+                    let goodsCont={src:this.src,cont:this.cont,price:this.price}
+                    localStorage.setItem("goodsCont",JSON.stringify(goodsCont))
+                    location.href = "http://localhost/11street/goodscont/goodsCont.html";
+                    
+                }
+            }
+
 
         }
 
