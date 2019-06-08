@@ -1,4 +1,4 @@
-(function(){
+define(function(){
     "use strict"
     class Banner{
         constructor(){
@@ -137,5 +137,5 @@
             }
         }
     }
-    new Banner()
-})()
+    return {b:Banner}
+})

@@ -1,7 +1,8 @@
-(function(){
+define(function(){
     "use strict"
     class Hot{
-        constructor(){
+        constructor(options){
+            this.ajax=options.ajax
             this.liT=document.querySelectorAll(".main-hot-t li");
             this.ulB=document.querySelector(".main-hot-b");
             this.url="http://localhost/11street/public/json/hot.json";
@@ -13,11 +14,10 @@
             this.addEvent()
             this.changeColor()
             
-            
         }
         getList(){
             var that=this
-            ajax({
+            this.ajax({
                 url:this.url,
                 success:function(res){
                     that.res=JSON.parse(res)
@@ -37,7 +37,7 @@
             var that=this
             var str=""
             for(var i=index*this.num;i<index*this.num+this.num;i++){
-                str+=`<li>
+                str+=`<li class="goods-cont">
                         <div class="cont-1">
                             <img src="${res[i].url}" >
                             <p>${res[i].cont}</p>
@@ -144,6 +144,6 @@
                 }
             }
         }
-    }
-    new Hot()
-})()
+    };
+    return {h:Hot};
+})

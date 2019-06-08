@@ -1,7 +1,9 @@
-(function(){
+define(function(){
     "use strict"
     class Tjcx{
-        constructor(){
+        constructor(options){
+            this.ajax=options.ajax
+
             this.thCont=document.querySelector(".main-best .layout ul")
             this.url="http://localhost/11street/public/json/tjzq.json";
             this.index=0;
@@ -29,7 +31,7 @@
         }
         getList(){
             var that=this
-            ajax({
+            this.ajax({
                 url:this.url,
                 success:function(res){
                     that.res=JSON.parse(res)
@@ -40,7 +42,7 @@
         addCont(){
             var str =""
             for(var i=this.index*8;i<this.index*8+8;i++){
-                str+=`  <li>
+                str+=`  <li class="goods-cont">
                             <div class="cont-1">
                                 <img src="${this.res[i].url}">
                                 <p>${this.res[i].cont}</p>
@@ -51,11 +53,12 @@
                         </li>
                         `
                     }
-                this.thCont.innerHTML=str
-                this.changeBorder()
+            this.thCont.innerHTML=str
+            this.changeBorder();
+            this.getlocal()
+
         }
         changeBorder(){
-            console.log(1)
             var that=this
             this.thCont.onmouseover=function(eve){
                 var e=eve||window.event
@@ -73,6 +76,28 @@
                 }
             }
         }
+        getlocal(){
+            var that=this
+            this.ali=document.querySelectorAll(".goods-cont");
+            console.log(this.ali)
+            for(var i=0;i<this.ali.length;i++){
+                this.ali[i].onclick=function(){
+                    this.src = this.children[0].children[0].src
+                    this.cont = this.children[0].children[1].innerHTML
+                    this.price = this.children[0].children[2].children[0].innerHTML
+                    let goodsCont={src:this.src,cont:this.cont,price:this.price}
+                    localStorage.setItem("goodsCont",JSON.stringify(goodsCont))
+                    location.href = "http://localhost/11street/goodscont/goodsCont.html";
+                    
+                }
+            }
+
+
+        }
+
+
+
+
     }
-    new Tjcx()
-})()
+    return {t:Tjcx}
+})

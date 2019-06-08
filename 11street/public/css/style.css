@@ -6,14 +6,23 @@
 #headerNav .layout>div{float:right;font:13px/17px "";display:flex;padding-top:10px;}
 #headerNav .layout>div>a{margin:0 3px}
 #headerNav .layout>div>span{margin:3px 3px 0 0;width: 1px;height: 10px;background: #e2e1e0;}
+header .layout{position: relative;}
 header{height:110px;background-color:#fff;border-bottom:2px solid #e0e0e0;overflow: hidden;}
 header .logo{display:block;background: url(../images/logo.png);width:98px;height:53px;margin:36px 0 0 39px;float: left;}
 header #txt{width:435px;height:45px;box-sizing:border-box;border:2px solid #f43445;float: left;margin:30px 0 0 78px;font: 14px/18px "";text-indent:1em;}
-header #btn1{width:45px;height:45px;border:2px solid #f43445;background:#f43142 url(../images/fdj.png) no-repeat;float: left;margin-top:30px;}
+
+header .search-res{position:fixed;left:29.78%;top:116px;width: 435px;border: 1px solid rgba(253, 149, 149, 0.842);overflow: hidden;border-radius: 10px;z-index: 60;display: none}
+
+header .search-res li{list-style-type: none;font:18px/30px "";padding: 2px 5px;border-bottom: 1px solid rgba(253, 149, 149, 0.842);background:rgba(253, 149, 149, 0.514);z-index:9999;color:#fff}
+
+
+header #btn1{width:45px;height:45px;border:2px solid #f43445;background:#f43142 url(../images/fdj.png) no-repeat;float: left;margin-top:30px;cursor: pointer;}
 header>.layout>div{width:200px;height:18px;float: left;margin:45px 0 0 22px;}
 header>.layout>div>a>em{font: 14px/18px "";}
 header>.layout>div>span{margin:3px 3px 0 0;width: 1px;height: 10px;background: #e2e1e0;display: inline-block;}
 header .ps{width:160px;height:46px;background:url(../images/gjfs.png);display:block;float:right;margin-top:30px}
+
+
 
 nav{height:52px;background-color:#fff;border-bottom:2px solid #000;position: relative;}
 nav #btn2{height:52px;width:175px;;cursor: default;font:14px/37px "";border:2px solid #e0e0e0;background-color: transparent;vertical-align: middle;    background-color: rgb(233, 237, 240);float: left;}

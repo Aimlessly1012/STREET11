@@ -1,5 +1,4 @@
-define(function(){
-    'use strict';
+
     function ajax(options){
     let type = options.type ? options.type : "get";
     let data = options.data ? options.data : {};
@@ -40,5 +39,3 @@ define(function(){
     }
     ajax.send(str)
     }
-    return {a:ajax}
-})

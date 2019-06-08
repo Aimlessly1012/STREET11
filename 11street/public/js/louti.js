@@ -1,5 +1,4 @@
-(function(){
-    "use strict"
+define(function(){
     var ali=document.querySelectorAll("figure ul li")
     var scrollTop=document.documentElement.scrollTop
     ali[0].onclick=function(){
@@ -20,4 +19,4 @@
     ali[5].onclick=function(){
         document.documentElement.scrollTop=3120
     }
-})()
+})

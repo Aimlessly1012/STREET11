@@ -1,7 +1,8 @@
-(function(){
+define(function(){
     "use strict"
-    class Tjcx{
-        constructor(){
+    class Rec{
+        constructor(options){
+            this.ajax=options.ajax
             this.thCont=document.querySelector(".main-rec ul")
             this.url="http://localhost/11street/public/json/rec.json";
             this.index=0;
@@ -29,7 +30,7 @@
         }
         getList(){
             var that=this
-            ajax({
+            this.ajax({
                 url:this.url,
                 success:function(res){
                     that.res=JSON.parse(res)
@@ -49,5 +50,6 @@
                 this.thCont.innerHTML=str
         }
     }
-    new Tjcx()
-})()
+    
+    return {c:Rec}
+})

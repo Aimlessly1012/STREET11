@@ -14,9 +14,9 @@
     <div id="headerNav">
         <div class="layout">
             <div>
-                <a href="../Sign in/Sign in.html"><em>登录</em></a>
+                <a href="Sign in.html"><em>登录</em></a>
                 <span></span>
-                <a href="register.html"><em>注册会员</em></a>
+                <a href="../register/register.html"><em>注册会员</em></a>
                 <span></span>
                 <a><em>我的11STREET</em></a>
                 <span></span>
@@ -122,26 +122,30 @@
         </div>
     </nav>
     <main>
-        <h3>11STREET 热销尖货</h3>
-            <ul class="nr">
-                <!-- <li>
-                    <div class="cont-1">
-                        <img data-src="http://i.11street.com/ex_t/R/212x212/1/85/1/src/pd/19/9/2/7/4/4/1/uBYcu/1435927441_L300.jpg" alt="">
-                        <p>[金在奂] MIN:D 粉丝见面会官方周边</p>
-                        <div>
-                            <span>￥61.26~</span>
-                            <i>1</i>
-                        </div>
-                    </div>
-                </li> -->
-            </ul>
-            <div class="pagWarp" id="pageWarp">
-                    <span id="btnL">上一页</span>
-                    <ul id="pageCont">
-                    </ul>
-                    <span id="btnR">下一页</span>
-                </div>
-            </body>
+        <h2>购物车<small>
+        <table border="1" cellspacing="0" width="800" align="center" class="tab">
+            <thead>
+                <tr>
+                    <th>选中</th>
+                    <th>图片</th>
+                    <th>名字</th>
+                    <th>价格</th>
+                    <th>数量</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                        <td><input type="cheackbox"></td>
+                        <td><img src="" alt=""></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><span id="btn2">删除</span></td>
+                    </tr> -->
+            </tbody>
+        </table>
+
     </main>
         
     <footer>
@@ -187,27 +191,28 @@
 </body>
 <script src="js/ajax.2.0.js"></script>
 <script src="js/menu.js"></script>
-<script src="js/getlist.js"></script>
-
+<script src="js/car.js"></script>
 <script>
-    class Menu{
-        constructor(){
-            this.btn=document.querySelector("nav #btn2")
-            this.list=document.querySelector("nav .yiji")
-            this.init()
-        };
-        init(){
-            var that=this
-            this.btn.onmouseover=function(){
-                that.list.style.display="block"
-            }
-            this.btn.onmouseout=function(){
-                that.list.style.display="none"
+        (function(){
+            class Menu{
+                constructor(){
+                    this.btn=document.querySelector("nav #btn2")
+                    this.list=document.querySelector("nav .yiji")
+                    this.init()
+                };
+                init(){
+                    var that=this
+                    this.btn.onmouseover=function(){
+                        that.list.style.display="block"
+                    }
+                    this.btn.onmouseout=function(){
+                        that.list.style.display="none"
+                    }
+
+                }
             }
 
-        }
-    }
-    new Menu()
-    
+            new Menu
+        })()
     </script>
 </html>

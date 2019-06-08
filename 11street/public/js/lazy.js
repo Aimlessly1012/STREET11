@@ -1,4 +1,4 @@
-(function(){
+define(function(){
     "use strict"
     class Lazy{
         constructor(){
@@ -25,4 +25,5 @@
 
         }
     }
-})()
+    return {l:Lazy}
+})

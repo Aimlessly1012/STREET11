@@ -31,7 +31,7 @@
             var str=""
             for(var i=this.index*this.num;i<this.index*this.num+this.num;i++){
                 if(i<this.res.length){
-                    str+=`<li class=${this.res[i].id}>
+                    str+=`<li class="${this.res[i].id} goods-cont">
                             <div class="cont-1">
                                 <img data-src="${this.res[i].url}" >
                                 <p>${this.res[i].cont}</p>
